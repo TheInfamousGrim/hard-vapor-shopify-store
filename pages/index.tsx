@@ -17,6 +17,7 @@ export default function Home() {
       <main className="h-screen bg-black">
         <h2 className="font-newake text-7xl text-white">hello</h2>
         <p className="font-firasans text-6xl text-white">Big boy</p>
+        <p className="text-5xl text-white">hey now</p>
       </main>
     </>
   );

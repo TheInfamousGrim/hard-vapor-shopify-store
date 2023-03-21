@@ -6,10 +6,13 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'body': ["Fira sans", "sans-serr"]
+    },
     extend: {
       fontFamily: {
-        firasans: ["Fira Sans", "sans-serif"],
-        newake: ["Newake", "sans-serif"]
+        'firasans': ["Fira Sans", "sans-serif"],
+        'newake': ["Newake", "sans-serif"],
       }
     },
   },
