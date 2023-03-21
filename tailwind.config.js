@@ -6,7 +6,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        firasans: ["Fira Sans", "sans-serif"],
+        newake: ["Newake", "sans-serif"]
+      }
+    },
   },
   plugins: [],
 }
