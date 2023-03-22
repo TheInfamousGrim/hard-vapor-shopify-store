@@ -15,6 +15,7 @@ import imgHeroVertical from '@/public/hero/hard-vapor-neon-logo-vertical.jpg';
 
 // Logos
 import logoHardVapor from '@/public/favicons/android-chrome-512x512.png';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   console.log(borderGlow.glow);
@@ -48,7 +49,7 @@ export default function Home() {
         <link rel="manifest" href="./favicons/site.webmanifest" />
       </Head>
       <Navigation />
-      <main className="container mx-auto sm:px-6 lg:px-8">
+      <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <section
           className={`${borderGlow.glow} relative z-10 mt-7 overflow-hidden rounded-3xl border-8 border-aquamarine`}
         >
@@ -84,7 +85,7 @@ export default function Home() {
         <p className="font-firasans text-6xl text-white">Big boy</p>
         <p className="text-5xl text-white">hey now</p>
       </main>
-      <footer>hello</footer>
+      <Footer />
     </>
   );
 }
