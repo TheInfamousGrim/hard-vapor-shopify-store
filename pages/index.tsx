@@ -9,17 +9,19 @@ import Navigation from '@/components/Navigation';
 // Styles
 import borderGlow from '@/styles/border.module.css';
 
-// Images
-import imgHero from '@/public/hero/Hard-Vapor-Neon-Logo.jpg';
+/* --------------------------------- Images --------------------------------- */
+// Hero Section
 import imgHeroVertical from '@/public/hero/hard-vapor-neon-logo-vertical.jpg';
 
+// Category Section
+import imgCategoryAccessories from '@/public/categories/accessories.jpg';
+import imgCategoryGraphicTees from '@/public/categories/graphic-tees.jpg';
+import imgCategoryNewArrival from '@/public/categories/new-arrivals.jpg';
+
 // Logos
-import logoHardVapor from '@/public/favicons/android-chrome-512x512.png';
 import Footer from '@/components/Footer';
 
 export default function Home() {
-  console.log(borderGlow.glow);
-
   return (
     <>
       <Head>
@@ -51,7 +53,7 @@ export default function Home() {
       <Navigation />
       <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <section
-          className={`${borderGlow.glow} relative z-10 mx-4 mt-7 overflow-hidden rounded-3xl border-8 border-aquamarine`}
+          className={`${borderGlow.glow} relative z-10 mt-7 overflow-hidden rounded-3xl border-8 border-aquamarine`}
         >
           <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
             <div className="px-6 pt-10 pb-24 sm:pb-32 lg:col-span-7 lg:px-0 lg:pt-48 lg:pb-56 xl:col-span-6">
@@ -69,7 +71,9 @@ export default function Home() {
               </div>
             </div>
             <div className="relative -z-10 lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0">
-              <img
+              <Image
+                width={2100}
+                height={3150}
                 className="lg:aspect-auto aspect-[3/2] w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:h-full"
                 src={imgHeroVertical.src}
                 alt=""
@@ -79,26 +83,26 @@ export default function Home() {
         </section>
         {/* Category Section */}
         <section className="mt-7">
-          <div className="mx-auto max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl py-16 sm:py-24">
             <div className="sm:flex sm:items-baseline sm:justify-between">
               <h2 className="bg-gradient-to-r from-sunglow to-bright-pink bg-clip-text py-2 font-newake text-5xl tracking-tight text-transparent drop-shadow-md">
                 Shop by category
               </h2>
-              <a
-                href="#"
-                className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block"
-              >
-                Browse all categories
-                <span aria-hidden="true"> &rarr;</span>
-              </a>
+              <div className="hidden sm:block">
+                <Button href="#" text="Browse all categories" />
+              </div>
             </div>
 
             <div className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:grid-rows-2 sm:gap-x-6 lg:gap-8">
-              <div className="group aspect-w-2 aspect-h-1 overflow-hidden rounded-lg sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2">
-                <img
-                  src="https://tailwindui.com/img/ecommerce-images/home-page-03-featured-category.jpg"
-                  alt="Two models wearing women's black cotton crewneck tee and off-white cotton crewneck tee."
-                  className="object-cover object-center group-hover:opacity-75"
+              <div
+                className={`${borderGlow.glow} group aspect-w-2 aspect-h-1 overflow-hidden rounded-lg border-2 border-aquamarine sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2`}
+              >
+                <Image
+                  src={imgCategoryNewArrival.src}
+                  width={1280}
+                  height={1280}
+                  alt="A model with red hair in the swamp waving around toy lightsabers. Photo by Pavel Pjatakov on Unsplash"
+                  className="object-cover object-center duration-300 ease-linear group-hover:scale-125 group-hover:opacity-75"
                 />
                 <div
                   aria-hidden="true"
@@ -118,11 +122,15 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="group aspect-w-2 aspect-h-1 overflow-hidden rounded-lg sm:aspect-none sm:relative sm:h-full">
-                <img
-                  src="https://tailwindui.com/img/ecommerce-images/home-page-03-category-01.jpg"
-                  alt="Wooden shelf with gray and olive drab green baseball caps, next to wooden clothes hanger with sweaters."
-                  className="object-cover object-center group-hover:opacity-75 sm:absolute sm:inset-0 sm:h-full sm:w-full"
+              <div
+                className={`${borderGlow.glow} group aspect-w-2 aspect-h-1 overflow-hidden rounded-lg border-2 border-aquamarine sm:aspect-none sm:relative sm:h-full`}
+              >
+                <Image
+                  src={imgCategoryAccessories.src}
+                  width={1280}
+                  height={1280}
+                  alt="A person wearing a kitsune mask, with a white face mask on top. Photo by Anton Maksimov on Unsplash"
+                  className="object-cover object-center duration-300 ease-linear group-hover:scale-125 group-hover:opacity-75 sm:absolute sm:inset-0 sm:h-full sm:w-full"
                 />
                 <div
                   aria-hidden="true"
@@ -142,11 +150,15 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="group aspect-w-2 aspect-h-1 overflow-hidden rounded-lg sm:aspect-none sm:relative sm:h-full">
-                <img
-                  src="https://tailwindui.com/img/ecommerce-images/home-page-03-category-02.jpg"
+              <div
+                className={`${borderGlow.glow} group aspect-w-2 aspect-h-1 overflow-hidden rounded-lg border-2 border-aquamarine sm:aspect-none sm:relative sm:h-full`}
+              >
+                <Image
+                  src={imgCategoryGraphicTees.src}
+                  width={1280}
+                  height={1280}
                   alt="Walnut desk organizer set with white modular trays, next to porcelain mug on wooden desk."
-                  className="object-cover object-center group-hover:opacity-75 sm:absolute sm:inset-0 sm:h-full sm:w-full"
+                  className="object-cover object-center duration-300 ease-linear group-hover:scale-125 group-hover:opacity-75 sm:absolute sm:inset-0 sm:h-full sm:w-full"
                 />
                 <div
                   aria-hidden="true"
@@ -157,7 +169,7 @@ export default function Home() {
                     <h3 className="font-semibold text-white">
                       <a href="#">
                         <span className="absolute inset-0" />
-                        Workspace
+                        Graphic Tees
                       </a>
                     </h3>
                     <p aria-hidden="true" className="mt-1 text-sm text-white">
@@ -169,13 +181,7 @@ export default function Home() {
             </div>
 
             <div className="mt-6 sm:hidden">
-              <a
-                href="#"
-                className="block text-sm font-semibold text-indigo-600 hover:text-indigo-500"
-              >
-                Browse all categories
-                <span aria-hidden="true"> &rarr;</span>
-              </a>
+              <Button href="#" text="Browse all categories" />
             </div>
           </div>
         </section>
