@@ -85,7 +85,7 @@ export default function Home() {
         <section className="mt-7">
           <div className="mx-auto max-w-7xl py-16 sm:py-24">
             <div className="sm:flex sm:items-baseline sm:justify-between">
-              <h2 className="bg-gradient-to-r from-sunglow to-bright-pink bg-clip-text py-2 font-newake text-5xl tracking-tight text-transparent drop-shadow-md">
+              <h2 className="bg-gradient-to-r from-sunglow to-aquamarine bg-clip-text py-2 font-newake text-5xl tracking-tight text-transparent drop-shadow-md">
                 Shop by category
               </h2>
               <div className="hidden sm:block">
@@ -185,6 +185,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        {/* Incentives Section */}
         <h2 className="bg-gradient-to-r from-aquamarine to-bright-pink bg-clip-text font-newake text-7xl text-transparent">
           hello
         </h2>
