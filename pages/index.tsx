@@ -60,7 +60,7 @@ export default function Home() {
                 <h1 className="mt-24 bg-gradient-to-r from-aquamarine via-sunglow to-bright-pink bg-clip-text font-newake text-4xl uppercase tracking-tight text-transparent sm:mt-10 sm:text-7xl">
                   The new wave of aesthetic is here
                 </h1>
-                <p className="mt-6 text-lg leading-8 text-gray-100">
+                <p className="mt-6 text-lg font-bold leading-8 text-gray-100">
                   Hard vapor is here to deliver the most phantasmagoric designs.
                   Check out our new arrivals today.
                 </p>
