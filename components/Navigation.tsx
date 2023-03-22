@@ -397,7 +397,7 @@ export default function Navigation() {
           aria-label="Top"
           className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
         >
-          <div className="border-b border-floral-white">
+          <div className="border-b border-aquamarine">
             <div className="flex h-16 items-center justify-between">
               <div className="flex flex-1 items-center lg:hidden">
                 <button
