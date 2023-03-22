@@ -1,5 +1,11 @@
+// Dependencies
 import Link from 'next/link';
+import Image from 'next/image';
 
+// Logo
+import logoHardVapor from '@/public/favicons/android-chrome-512x512.png';
+
+// Types
 type IconProps = {
   className: string;
 };
@@ -48,7 +54,14 @@ export default function Footer() {
             </Link>
           ))}
         </div>
-        <div className="mt-8 md:order-1 md:mt-0">
+        <div className="mt-8 flex w-fit items-center md:order-1 md:mt-0">
+          <Image
+            src={logoHardVapor.src}
+            height={32}
+            width={32}
+            alt="Hard vapor clothing logo"
+          />
+
           <p className="text-center text-xs leading-5 text-gray-100">
             &copy; {new Date().getFullYear().toString()} Hard Vapor Clothing,
             Inc. All rights reserved.
